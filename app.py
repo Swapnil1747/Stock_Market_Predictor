@@ -118,7 +118,7 @@ to_metrics_csv = metrics_df.to_csv(index=False).encode('utf-8')
 st.download_button("Download Metrics CSV", to_metrics_csv, "metrics.csv", "text/csv")
 
 # ─── Next-Day Forecasts & Download ─────────────────
-st.subheader("🗕️ Next-Day Forecasts")
+st.subheader("Next-Day Forecasts")
 all_preds = []
 for tkr, series in data_dict.items():
     last100 = series.dropna().iloc[-100:]
